@@ -4,6 +4,62 @@ This is a grammar for a conlang called Tequi in the form of a React app. The app
 
 # Development info
 
+## Previewing
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Modifications to the code are reflected in real time. In particular, changes to `pages/` result in new or modified content pages. 
+
+## Lexicon
+
+In `markdoc/config.ts`, the value of `config.variables` is a hash of lexical entries. Each entry's value is a list of words (enabling multiword expressions), each word is a list of morphemes, and each morpheme has these fields:
+
+- `kind`: either `root`, `clitic`, `redup`, or `infix`
+- `side` [only when `kind` is not `root`]: the side the morpheme is attached to, `left` or `right`. This allows distinctions between prefixes and suffixes, proclitics and enclitics, etc. For infixes, it determines which side of its parent morpheme the gloss is attached to in interlinear text.
+- `segments`: a list of segments
+- `gloss`: a single-morpheme gloss to display in interlinear text
+- `note`: a note to display in informational tooltips
+
+A segment can be an infix, or a `sounds` object with the following fields:
+
+- `kind`: `sounds`
+- `spelling`
+- `ipa`
+
+You can use keys from `config.variables` to produce words in the output.  
+
+## Markdoc tags
+
+In addition to the default Markdoc tags, the app provides:
+
+### Linguistic examples
+
+The `example` tag has these attributes:
+
+```
+{% example 
+   content=concat($key1, $key2)
+   ft="Free translation"
+   note="Note" /%}
+```
+
+The values in `content` are keys from the lexicon.
+
+### Linguistic examples
+
+```
+{% content=concat($word, $other_word) 
+   example ft="Translation" 
+   note="Note" %}
+```
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
