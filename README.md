@@ -1,3 +1,5 @@
+This is a conlang grammar in the form of a React app. The app provides toggleable interlinear glosses, tooltips with grammar information, and some nice layout. It uses Markdoc as an authoring framework and Next.js as a React framework. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
