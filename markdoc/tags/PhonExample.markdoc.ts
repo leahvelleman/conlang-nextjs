@@ -9,8 +9,8 @@ export const phonexample = {
     content: {
       type: Array,
     },
-    note: {
-      type: String,
+    notes: {
+      type: Array,
     }
   },
 };

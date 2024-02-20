@@ -37,7 +37,7 @@ When more precision is needed, use additional [verbs](#verbs) or [expressives](#
 
 In other ways, Tequi predicates are _more_ specific than English ones. In particular, there's a class of predicates that agree with the _shape_ of their subject or object.
 
-{% table .example %}
+{% table .layout %}
 ---
 - {% example ft="Move it (something tall)." content=concat($move_ctrl_tall, $dem) /%}
 - {% example ft="It stands up (something tall)." content=concat($dem, $say, $stand_up_tall) /%}

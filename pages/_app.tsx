@@ -12,6 +12,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 
+import Stack from "react-bootstrap/Stack";
+
 import Form from "react-bootstrap/Form";
 import SSRProvider from "react-bootstrap/SSRProvider";
 
@@ -30,41 +32,42 @@ export default function App({ Component, pageProps }: AppProps) {
     <SSRProvider>
       <DetailLevelContext.Provider value={[detail, setDetail]}>
         <Container fluid="true">
-          <Navbar
-            bg="light"
-            variant="light"
-            sticky="top"
-            expand="md"
-            style={{
-              background: "var(--nav-bg)",
-            }}
-          >
+          <Navbar bg="light" variant="light" sticky="top" expand="md">
             <Container fluid>
-              <Navbar.Brand href="#home">Tequi, a conlang</Navbar.Brand>
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/sounds">Sounds</Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
+              <Nav>
+                <Navbar.Brand href="#home">Tequi, a conlang</Navbar.Brand>
+
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav.Item className="nav-bright">
+                    <Nav.Link href="/">Home</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item className="nav-bright">
+                    <Nav.Link href="/sounds">Sounds</Nav.Link>
+                  </Nav.Item>
+
+                  <Nav.Item className="vr mx-3" />
+                  <Nav.Item>
+                    <Nav.Link href="/docs">Docs</Nav.Link>
+                  </Nav.Item>
+                </Navbar.Collapse>
+              </Nav>
+
               <Button
                 className="btn-success"
                 onClick={() => setDetail(!detail)}
               >
                 {detail ? "Less detailed examples" : "More detailed examples"}
               </Button>
+
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
             </Container>
           </Navbar>
 
           <Container fluid="true" id="content">
             <Row>
-              <Col></Col>
-              <Col md="8" style={{ maxWidth: "40em", padding: "2em" }}>
+              <Col className="content">
                 <Component {...pageProps} />
               </Col>
-
-              <Col></Col>
             </Row>
           </Container>
         </Container>

@@ -112,7 +112,7 @@ const config = {
 	[
 	  {
 	     kind: "root",
-	     segments: [{ kind: "sounds", spelling: "tsyk", ipa: "tszk" }],
+	     segments: [{ kind: "sounds", spelling: "tsyk", ipa: "tsz̩k" }],
 	     gloss: "sizzle",
 	     note: "is an [[expressive root]] meaning 'sizzle'."
 	  },
@@ -124,6 +124,128 @@ const config = {
 	     note: "is a [[pattern]] that forms [[verbs]]"
 	  }
 	]
+      ],
+      lower_cmp: [
+        [
+          {
+            kind: "affix",
+            side: "left",
+            segments: [{ kind: "sounds", spelling: "n", ipa: "n" }],
+            gloss: "CMP",
+            note: "is a [[shape prefix]] for compact things."
+          },
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "ash", ipa: "aʂ" }],
+            gloss: "send.NCTRL",
+            note: "is a [[verb]] meaning <i>send uncontrolled</i>."
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "y", ipa: "ɻ"}],
+            gloss: "down",
+            note: "is an [[afterverb]] meaning <i>down</i>."
+          }
+        ]
+      ],
+      eat: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "lu", ipa: "lu"}],
+            gloss: "eat",
+            note: "is a [[verb]] meaning <i>eat</i>."
+          }
+        ]
+      ],
+      hear: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "sē’u", ipa: "se:ʔu"}],
+            gloss: "hear",
+            note: "is a [[verb]] meaning <i>hear</i>."
+          },
+        ]
+      ],
+      convince: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "sē’ew", ipa: "se:ʔew"}],
+            gloss: "hear",
+            note: "is a [[verb]] meaning <i>hear</i>."
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "ah", ipa: "ah"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[causative verbs]]."
+          }
+        ]
+      ],
+      feed: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "law", ipa: "law"}],
+            gloss: "eat",
+            note: "is a [[verb]] meaning <i>eat</i>."
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "ah", ipa: "ah"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[causative verbs]]."
+          }
+        ]
+      ],
+      beginning_of: [
+        [
+          {
+            kind: "root",
+            segments: [{kind: "sounds", spelling: "’eo", ipa: "ʔeo"}],
+            gloss: "beginning",
+            note: "is a [[noun]] meaning <i>beginning</i>."
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "i", ipa: "i"}],
+            gloss: "DEP",
+            note: "is a suffix marking [[dependent state]]"
+          }
+        ]
+      ],
+      have_water: [
+        [
+          {
+            kind: "root",
+            segments: [{kind: "sounds", spelling: "aē", ipa: "ae:"}],
+            gloss: "water",
+            note: "is a [[noun]] meaning <i>water</i>."
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{kind: "sounds", spelling: "u", ipa: "u"}],
+            gloss: "have",
+            note: "is a [[suffix verb]] meaning <i>have</i>."
+          }
+        ]
+      ],
+      bear_point: [
+        [
+          {
+            kind: "root",
+            segments: [{kind: "sounds", spelling: "aruaō", ipa: "aʐwao:"}],
+            gloss: "bear.point",
+            note: "is a [[noun]] meaning <i>bear</i>. The last vowel is lengthened, making it a [[pointing-out form]]."
+          }
+        ]
       ],
       go_ctrl: [
         [
@@ -338,6 +460,165 @@ const config = {
                 gloss: "say",
                 note: "is a [[verb]] meaning <i>say</i>."
             },
+        ]
+      ],
+      have: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "oh", ipa: "oh"}],
+            gloss: "have",
+            note: "is a [[verb]] meaning <i>have</i>."
+          }
+        ]
+      ],
+      be_confident: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "o", ipa: "o"}],
+            gloss: "have",
+            note: "is a [[verb]] meaning <i>have</i>."
+          },
+
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "si", ipa: "si"}],
+            gloss: "REF",
+            note: "is a suffix that forms [[reflexive verbs]]."
+          }
+        ]
+      ],
+      give_to: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "owh", ipa: "oʍ"}],
+            gloss: "have",
+            note: "is a [[verb]] meaning <i>have</i>."
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "ah", ipa: "ah"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[causative verbs]]."
+          }
+        ]
+      ],
+      sleep: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "sha’", ipa: "ʃaʔ"}],
+            gloss: "sleep",
+            note: "is a [[verb]] meaning <i>sleep</i>"
+          }
+        ]
+      ],
+      put_to_sleep: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "shak", ipa: "ʃak"}],
+            gloss: "sleep",
+            note: "is a [[verb]] meaning <i>sleep</i>"
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "ah", ipa: "ah"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[causative verbs]]."
+          }
+        ]
+      ],
+      want: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "hō", ipa: "ho:"}],
+            gloss: "want",
+            note: "is a [[verb]] meaning <i>want</i>"
+          }
+        ]
+      ],
+      tempt: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "hōn", ipa: "ho:n"}],
+            gloss: "want",
+            note: "is a [[verb]] meaning <i>want</i>"
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "ah", ipa: "ah"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[causative verbs]]."
+          }
+        ]
+      ],
+      burn: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "ai’", ipa: "aiʔ"}],
+            gloss: "burn",
+            note: "is a [[verb]] meaning <i>burn</i>"
+          }
+        ]
+      ],
+      set_fire_to: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "ash", ipa: "aʃ"}],
+            gloss: "burn",
+            note: "is a [[verb]] meaning <i>burn</i>"
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "ah", ipa: "ah"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[causative verbs]]."
+          }
+        ]
+      ],
+      burn_oneself: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "ai", ipa: "ai"}],
+            gloss: "burn",
+            note: "is a [[verb]] meaning <i>burn</i>"
+          },
+          {
+            kind: "affix",
+            side: "right",
+            segments: [{ kind: "sounds", spelling: "tsi", ipa: "tsi"}],
+            gloss: "CAUS",
+            note: "is a suffix that forms [[reflexive verbs]]."
+          }
+        ]
+      ],
+      announce: [
+        [
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "o", ipa: "o"}],
+            gloss: "come",
+            note: "is a [[verb]] meaning <i>come</i>."
+          },
+          {
+            kind: "root",
+            segments: [{ kind: "sounds", spelling: "sha", ipa: "ʃa"}],
+            gloss: "say",
+            note: "is a [[verb]] meaning <i>say</i>."
+        },
         ]
       ],
       rock: [

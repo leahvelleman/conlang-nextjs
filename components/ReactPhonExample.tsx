@@ -3,19 +3,19 @@ import { ColumnarText } from "./ColumnarText";
 
 export function ReactPhonExample({
   fts = [""],
-  note = "",
+  notes = [""],
   content,
 }: {
   fts: string[];
-  note: string;
+  notes: string[];
   content: object;
 }) {
   return (
-    <div className="example">
-      <table className="columnar-text">
-	<tbody>
-        {<ColumnarText text={content as Word[]} fts={fts} />}
-	</tbody>
+    <div className="columnar example">
+      <table className="columnar layout">
+        <tbody>
+          <ColumnarText text={content as Word[]} fts={fts} notes={notes} />
+        </tbody>
       </table>
     </div>
   );

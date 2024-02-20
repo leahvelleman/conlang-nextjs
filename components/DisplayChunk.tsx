@@ -13,7 +13,7 @@ export function DisplayChunk({
 }: {
   morpheme: Morpheme;
   field: "spelling" | "gloss" | "ipa";
-  marks?: bool;
+  marks?: boolean;
   children?: (ReactElement | string)[];
 }) {
   const [activeMorpheme, setActiveMorpheme] = useContext(
@@ -47,7 +47,7 @@ function Popup({ morpheme }: { morpheme: Morpheme }) {
         dangerouslySetInnerHTML={{
           __html:
             `<strong>${citationForm(morpheme)}</strong> ` +
-            makeLinks(morpheme.note),
+            makeLinks(morpheme.note as string),
         }}
       />
     </div>

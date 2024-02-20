@@ -9,7 +9,7 @@ export function InterlinearMorphemeForm({
 }: {
   morpheme: Morpheme;
   field: "spelling" | "ipa";
-  marks?: bool
+  marks?: boolean
 }) {
   return (
     <DisplayChunk

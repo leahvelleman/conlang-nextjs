@@ -4,8 +4,8 @@ import { isInfix } from "../helpers/type_helpers";
 export function PlainText({ text }: { text: Word[] }) {
   return (
     <span className="plain form">
-      {text.map((word: Word) => (
-        <PlainWord word={word} />
+      {text.map((word: Word, key) => (
+        <PlainWord word={word} key={key} />
       ))}
     </span>
   );
@@ -14,8 +14,8 @@ export function PlainText({ text }: { text: Word[] }) {
 const PlainWord = ({ word }: { word: Word }) => {
   return (
     <span className="plain word form">
-      {word.map((morpheme) => (
-        <PlainMorphemeForm morpheme={morpheme} />
+      {word.map((morpheme, key) => (
+        <PlainMorphemeForm morpheme={morpheme} key={key} />
       ))}{" "}
     </span>
   );

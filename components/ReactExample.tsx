@@ -16,15 +16,15 @@ export function ReactExample({
 }) {
   return (
     <>
-      <div className="example">
-        <div className="interlinear-text">
+      <div className="interlinear example">
+        <div className="interlinear text">
           {<InterlinearText text={content as Word[]} />}
         </div>
-        <div className="free-translation" style={{ float: "left" }}>
-          <i>{ft}</i>
+        <div className="interlinear ft" style={{ float: "left" }}>
+          {ft}
         </div>
         {note && (
-          <div className="note" style={{ float: "right" }}>
+          <div className="interlinear note" style={{ float: "right" }}>
             {note}
           </div>
         )}
